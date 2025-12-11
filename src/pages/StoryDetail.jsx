@@ -207,7 +207,25 @@ export default function StoryDetail() {
 
         {/* Chapters List */}
         <div className="bg-white rounded-lg shadow-md p-3 sm:p-5 md:p-6 lg:p-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-5 md:mb-6">Chapters</h2>
+          <div className="flex items-center justify-between gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6 flex-wrap">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Chapters</h2>
+            {JSON.parse(localStorage.getItem('user') || '{}').role === 'admin' && (
+              <div className="flex gap-2 sm:gap-3">
+                <button
+                  onClick={() => navigate(`/add-chapter/${id}`)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 sm:py-2.5 px-2 sm:px-3 md:px-4 rounded-lg text-xs sm:text-sm"
+                >
+                  + Single
+                </button>
+                <button
+                  onClick={() => navigate(`/add-bulk-chapters/${id}`)}
+                  className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 sm:py-2.5 px-2 sm:px-3 md:px-4 rounded-lg text-xs sm:text-sm"
+                >
+                  + Bulk
+                </button>
+              </div>
+            )}
+          </div>
 
           {loading ? (
             <div className="flex justify-center items-center h-32">

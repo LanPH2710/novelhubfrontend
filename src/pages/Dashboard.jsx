@@ -106,9 +106,16 @@ export default function Dashboard() {
                           <a
                             href={`/add-chapter/${story._id}`}
                             className="text-blue-600 hover:underline text-xs"
-                            title="Add Chapter"
+                            title="Add Single Chapter"
                           >
                             +
+                          </a>
+                          <a
+                            href={`/add-bulk-chapters/${story._id}`}
+                            className="text-purple-600 hover:underline text-xs"
+                            title="Add Bulk Chapters"
+                          >
+                            +B
                           </a>
                           <button
                             onClick={() => handleDeleteStory(story._id)}

@@ -8,6 +8,7 @@ import StoryDetail from './pages/StoryDetail';
 import ReadChapter from './pages/ReadChapter';
 import AddStory from './pages/AddStory';
 import AddChapter from './pages/AddChapter';
+import AddBulkChapters from './pages/AddBulkChapters';
 import EditStory from './pages/EditStory';
 import EditChapter from './pages/EditChapter';
 import Dashboard from './pages/Dashboard';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/add-story" element={<AddStory />} />
         <Route path="/edit-story/:storyId" element={<EditStory />} />
         <Route path="/add-chapter/:storyId" element={<AddChapter />} />
+        <Route path="/add-bulk-chapters/:storyId" element={<AddBulkChapters />} />
         <Route path="/edit-chapter/:storyId/:chapterNumber" element={<EditChapter />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/history" element={<History />} />
