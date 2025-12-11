@@ -66,7 +66,7 @@ export default function AddStory() {
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-8">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Add New Story</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Thêm truyện mới</h1>
 
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 rounded mb-4">
@@ -77,7 +77,7 @@ export default function AddStory() {
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Title
+                Tên
               </label>
               <input
                 type="text"
@@ -91,7 +91,7 @@ export default function AddStory() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                  Author
+                  Tác giả
                 </label>
                 <input
                   type="text"
@@ -104,7 +104,7 @@ export default function AddStory() {
 
               <div>
                 <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                  Translator
+                  Nhà dịch
                 </label>
                 <input
                   type="text"
@@ -117,20 +117,20 @@ export default function AddStory() {
 
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Status
+                Trạng thái
               </label>
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
                 className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
-                <option value="ongoing">Ongoing</option>
-                <option value="full">Completed</option>
+                <option value="ongoing">Dang càng
+                <option value="full">Hoàn thành</option>
               </select>
             </div>
 
             <div>
-              <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">Summary</label>
+              <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">Tóm tắt</label>
               <RichTextEditor
                 value={summary}
                 onChange={setSummary}
@@ -140,7 +140,7 @@ export default function AddStory() {
 
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Cover Image
+                Hình ảnh bìa truyện
               </label>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <input
@@ -152,7 +152,7 @@ export default function AddStory() {
                 {coverPreview && (
                   <img
                     src={coverPreview}
-                    alt="Preview"
+                    alt="Xem trước"
                     className="h-20 sm:h-24 rounded object-cover"
                   />
                 )}
@@ -164,7 +164,7 @@ export default function AddStory() {
               disabled={loading}
               className="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
             >
-              {loading ? 'Creating...' : 'Create Story'}
+              {loading ? 'Đang tạo...' : 'Tạo truyện'}
             </button>
           </form>
         </div>

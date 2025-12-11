@@ -122,10 +122,10 @@ export default function AddBulkChapters() {
       <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-10 lg:py-12">
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">
-            Add Multiple Chapters
+            Thêm nhiều chương
           </h1>
           <p className="text-gray-600 text-xs sm:text-sm mb-6 sm:mb-8">
-            Paste multiple chapters separated by a delimiter. The first line of each chapter becomes the title.
+            Dán nhiều chương cách nhau bởi một dấu phân tách. Dòng đầu tiên của mỗi chương sẽ trở thành tên chương.
           </p>
 
           {error && (
@@ -143,12 +143,12 @@ export default function AddBulkChapters() {
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Settings Section */}
             <div className="bg-gray-50 rounded-lg p-3 sm:p-4 border border-gray-200">
-              <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800">Settings</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800">Cài đặt</h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                    Start Chapter Number
+                    Bắt đầu từ số chương
                   </label>
                   <input
                     type="number"
@@ -161,13 +161,13 @@ export default function AddBulkChapters() {
 
                 <div>
                   <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                    Chapter Separator
+                    Dấu phân tách chương
                   </label>
                   <input
                     type="text"
                     value={separator}
                     onChange={(e) => setSeparator(e.target.value)}
-                    placeholder="e.g., ________________"
+                    placeholder="ví dụ: ________________"
                     className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
@@ -177,15 +177,15 @@ export default function AddBulkChapters() {
             {/* Content Input */}
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Chapter Content
+                Nội dung chương
               </label>
               <p className="text-gray-600 text-xs mb-2">
-                Paste all chapters here. Use the separator above to divide chapters.
+                Dán tất cả các chương ở đây. Sử dụng dấu phân tách ở trên để chia các chương.
               </p>
               <textarea
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
-                placeholder="Paste your chapters here..."
+                placeholder="Dán các chương của bạn ở đây..."
                 className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono"
                 rows="20"
               />
@@ -198,14 +198,14 @@ export default function AddBulkChapters() {
               disabled={loading}
               className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 sm:py-3 px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
             >
-              Preview Chapters
+              Xem trước các chương
             </button>
 
             {/* Preview Section */}
             {previewChapters.length > 0 && (
               <div className="bg-blue-50 rounded-lg p-3 sm:p-4 border border-blue-200">
                 <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800">
-                  Found {previewChapters.length} Chapters
+                  Tìm thấy {previewChapters.length} chương
                 </h2>
                 
                 <div className="space-y-2 sm:space-y-3 max-h-96 overflow-y-auto">
@@ -223,9 +223,9 @@ export default function AddBulkChapters() {
                         {chapter.uploadStatus && (
                           <div className="flex-shrink-0">
                             {chapter.uploadStatus.success ? (
-                              <span className="text-green-600 text-xs sm:text-sm font-semibold">✓ Done</span>
+                              <span className="text-green-600 text-xs sm:text-sm font-semibold">✓ Hoàn tất</span>
                             ) : (
-                              <span className="text-red-600 text-xs sm:text-sm font-semibold">✗ Failed</span>
+                              <span className="text-red-600 text-xs sm:text-sm font-semibold">✗ Lỗi</span>
                             )}
                           </div>
                         )}
@@ -240,7 +240,7 @@ export default function AddBulkChapters() {
             {loading && uploadProgress.total > 0 && (
               <div className="bg-blue-50 rounded-lg p-3 sm:p-4 border border-blue-200">
                 <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">
-                  Uploading: {uploadProgress.current} of {uploadProgress.total}
+                  Đang tải lên: {uploadProgress.current} trong {uploadProgress.total}
                 </p>
                 <div className="w-full bg-blue-200 rounded-full h-2">
                   <div
@@ -258,7 +258,7 @@ export default function AddBulkChapters() {
                 disabled={loading}
                 className="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
               >
-                {loading ? `Uploading... (${uploadProgress.current}/${uploadProgress.total})` : `Create ${previewChapters.length} Chapters`}
+                {loading ? `Đang tải lên... (${uploadProgress.current}/${uploadProgress.total})` : `Tạo ${previewChapters.length} chương`}
               </button>
             )}
 
@@ -268,7 +268,7 @@ export default function AddBulkChapters() {
               onClick={() => navigate(`/story/${storyId}`)}
               className="w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 sm:py-3 px-4 rounded-lg text-sm sm:text-base"
             >
-              Cancel
+              Hủy
             </button>
           </form>
         </div>

@@ -75,7 +75,7 @@ export default function StoryDetail() {
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <div className="flex justify-center items-center h-64">
-          <div className="text-xl text-gray-600">Loading...</div>
+          <div className="text-xl text-gray-600">Đang tải...</div>
         </div>
       </div>
     );
@@ -114,7 +114,7 @@ export default function StoryDetail() {
               
               {story.translator && (
                 <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
-                  <strong>Translator:</strong> {story.translator}
+                  <strong>Nhà dịch:</strong> {story.translator}
                 </p>
               )}
 
@@ -124,17 +124,17 @@ export default function StoryDetail() {
                     ? 'bg-green-100 text-green-800' 
                     : 'bg-yellow-100 text-yellow-800'
                 }`}>
-                  {story.status === 'full' ? 'Completed' : 'Ongoing'}
+                  {story.status === 'full' ? 'Hoàn thành' : 'Đang càng'}
                 </span>
                 <span className="text-xs sm:text-sm text-gray-600">
-                  {story.chaptersCount} chapters
+                  {story.chaptersCount} chương
                 </span>
               </div>
 
-              <h3 className="font-bold text-xs sm:text-sm md:text-base lg:text-lg mb-2 sm:mb-3">Summary</h3>
+              <h3 className="font-bold text-xs sm:text-sm md:text-base lg:text-lg mb-2 sm:mb-3">Tóm tắt</h3>
               <div className="mb-4 flex items-center gap-2 sm:gap-3 md:gap-4 flex-col sm:flex-row flex-wrap">
                 <div className="flex items-center gap-2 w-full sm:w-auto">
-                  <label className="text-xs sm:text-sm font-semibold whitespace-nowrap">Size:</label>
+                  <label className="text-xs sm:text-sm font-semibold whitespace-nowrap">Kích thước:</label>
                   <input
                     type="range"
                     min="12"
@@ -151,7 +151,7 @@ export default function StoryDetail() {
                 </div>
 
                 <div className="flex items-center gap-2 w-full sm:w-auto">
-                  <label className="text-xs sm:text-sm font-semibold whitespace-nowrap">Font:</label>
+                  <label className="text-xs sm:text-sm font-semibold whitespace-nowrap">Phông chữ:</label>
                   <select
                     value={summaryFontFamily}
                     onChange={(e) => {

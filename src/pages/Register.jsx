@@ -18,7 +18,7 @@ export default function Register() {
     setError('');
 
     if (password !== confirmPassword) {
-      setError('Passwords do not match');
+      setError('Mật khẩu không trùng khớp');
       return;
     }
 
@@ -42,7 +42,7 @@ export default function Register() {
       
       <div className="max-w-md mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-8">
-          <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Register</h1>
+          <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Đăng ký</h1>
 
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 rounded mb-3 sm:mb-4">
@@ -53,7 +53,7 @@ export default function Register() {
           <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Username
+                Tên người dùng
               </label>
               <input
                 type="text"
@@ -66,7 +66,7 @@ export default function Register() {
 
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Password
+                Mật khẩu
               </label>
               <div className="relative">
                 <input
@@ -89,7 +89,7 @@ export default function Register() {
 
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Confirm Password
+                Xác nhận mật khẩu
               </label>
               <div className="relative">
                 <input
@@ -115,14 +115,14 @@ export default function Register() {
               disabled={loading}
               className="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-3 sm:px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
             >
-              {loading ? 'Registering...' : 'Register'}
+              {loading ? 'Đang đăng ký...' : 'Đăng ký'}
             </button>
           </form>
 
           <p className="text-center text-gray-600 mt-4 text-xs sm:text-sm">
-            Already have an account?{' '}
+            Đã có tài khoản?{' '}
             <a href="/login" className="text-primary hover:underline font-semibold">
-              Login
+              Đăng nhập
             </a>
           </p>
         </div>

@@ -25,18 +25,18 @@ export default function Navbar() {
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-4">
             <a href="/" className="text-gray-600 hover:text-primary text-sm">
-              Home
+              Trang chủ
             </a>
             <a href="/history" className="text-gray-600 hover:text-primary text-sm">
-              History
+              Lịch sử
             </a>
             {isAdmin && (
               <>
                 <a href="/dashboard" className="text-gray-600 hover:text-primary text-sm">
-                  Dashboard
+                  Bảng điều khiển
                 </a>
                 <a href="/add-story" className="text-gray-600 hover:text-primary text-sm">
-                  Add Story
+                  Thêm truyện
                 </a>
               </>
             )}
@@ -59,7 +59,7 @@ export default function Navbar() {
                   onClick={handleLogout}
                   className="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded text-sm"
                 >
-                  Logout
+                  Đăng xuất
                 </button>
               </>
             ) : (
@@ -67,7 +67,7 @@ export default function Navbar() {
                 href="/login"
                 className="bg-primary hover:bg-indigo-700 text-white px-3 py-2 rounded text-sm"
               >
-                Login
+                Đăng nhập
               </a>
             )}
           </div>
@@ -79,14 +79,14 @@ export default function Navbar() {
                 onClick={handleLogout}
                 className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded text-xs"
               >
-                Logout
+                Đăng xuất
               </button>
             ) : (
               <a
                 href="/login"
                 className="bg-primary hover:bg-indigo-700 text-white px-2 py-1 rounded text-xs"
               >
-                Login
+                Đăng nhập
               </a>
             )}
           </div>
@@ -96,22 +96,22 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-gray-50 border-t py-2">
             <a href="/" className="block px-4 py-2 text-gray-600 hover:text-primary text-sm">
-              Home
+              Trang chủ
             </a>
             <a href="/history" className="block px-4 py-2 text-gray-600 hover:text-primary text-sm">
-              History
+              Lịch sử
             </a>
             {isAdmin && (
               <>
                 <a href="/dashboard" className="block px-4 py-2 text-gray-600 hover:text-primary text-sm">
-                  Dashboard
+                  Bảng điều khiển
                 </a>
                 <a href="/add-story" className="block px-4 py-2 text-gray-600 hover:text-primary text-sm">
-                  Add Story
+                  Thêm truyện
                 </a>
               </>
             )}
-            {user.username && <div className="px-4 py-2 text-sm text-gray-600">Logged in as {user.username}</div>}
+            {user.username && <div className="px-4 py-2 text-sm text-gray-600">Đăng nhập với tư {user.username}</div>}
           </div>
         )}
       </div>

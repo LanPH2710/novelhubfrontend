@@ -110,7 +110,7 @@ export default function ReadChapter() {
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <div className="flex justify-center items-center h-64">
-          <div className="text-xl text-gray-600">Loading...</div>
+          <div className="text-xl text-gray-600">Đang tải...</div>
         </div>
       </div>
     );
@@ -126,7 +126,7 @@ export default function ReadChapter() {
           <div className="bg-white rounded-lg shadow-md p-3 sm:p-4 mb-4 sm:mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4">
             {/* Left: Size */}
             <div className="flex items-center gap-2 text-sm sm:text-base">
-              <label className="font-semibold whitespace-nowrap">Size:</label>
+              <label className="font-semibold whitespace-nowrap">Kích thước:</label>
               <input
                 type="range"
                 min="12"
@@ -140,7 +140,7 @@ export default function ReadChapter() {
 
             {/* Middle-Left: Font */}
             <div className="flex items-center gap-2 text-sm sm:text-base">
-              <label className="font-semibold whitespace-nowrap">Font:</label>
+              <label className="font-semibold whitespace-nowrap">Phông chữ:</label>
               <select
                 value={fontFamily}
                 onChange={(e) => setFontFamily(e.target.value)}
@@ -161,14 +161,14 @@ export default function ReadChapter() {
                 disabled={!prevChapNum}
                 className={`px-2 sm:px-3 py-1 sm:py-2 rounded text-xs sm:text-base ${prevChapNum ? 'bg-gray-600 hover:bg-gray-700 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
               >
-                ← Prev
+                ← Trước
               </button>
 
               <button
                 onClick={() => setShowChoose(true)}
                 className="bg-blue-500 hover:bg-blue-600 text-white px-2 sm:px-3 py-1 sm:py-2 rounded text-xs sm:text-base"
               >
-                Choose
+                Chọn
               </button>
 
               <button
@@ -176,14 +176,14 @@ export default function ReadChapter() {
                 disabled={!nextChapNum}
                 className={`px-2 sm:px-3 py-1 sm:py-2 rounded text-xs sm:text-base ${nextChapNum ? 'bg-gray-600 hover:bg-gray-700 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
               >
-                Next →
+                Sau →
               </button>
 
               <button
                 onClick={() => navigate(`/story/${storyId}`)}
                 className="bg-primary hover:bg-indigo-700 text-white px-2 sm:px-3 py-1 sm:py-2 rounded text-xs sm:text-base"
               >
-                Back
+                Quở lại
               </button>
             </div>
           </div>
@@ -359,7 +359,7 @@ export default function ReadChapter() {
               </button>
             </div>
           ) : (
-            <div className="w-full text-center text-gray-500 text-xs sm:text-base">Scroll to the end to show navigation</div>
+            <div className="w-full text-center text-gray-500 text-xs sm:text-base">Cuộn đến cuối để hiển thị điều hướng</div>
           )}
         </div>
 
@@ -368,7 +368,7 @@ export default function ReadChapter() {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 sm:p-4">
             <div className="bg-white rounded-lg w-full max-w-2xl p-4 sm:p-6 max-h-96 overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold">Chapters</h3>
+                <h3 className="text-lg font-semibold">Các chương</h3>
                 <button onClick={() => setShowChoose(false)} className="text-gray-600 text-2xl">×</button>
               </div>
               <div className="space-y-2">
@@ -382,7 +382,7 @@ export default function ReadChapter() {
                         onClick={() => { setShowChoose(false); navigate(`/read/${storyId}/${c.chapterNumber}`); }}
                         className="bg-primary hover:bg-indigo-700 text-white px-2 sm:px-3 py-1 rounded text-xs sm:text-sm"
                       >
-                        Read
+                        Đọc
                       </button>
                     </div>
                   </div>
@@ -397,8 +397,8 @@ export default function ReadChapter() {
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 bg-primary hover:bg-indigo-700 text-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-300 z-40"
-            title="Back to top"
-            aria-label="Scroll to top"
+            title="Lên trên Đầu trang"
+            aria-label="Cuộn lên đầu trang"
           >
             <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />

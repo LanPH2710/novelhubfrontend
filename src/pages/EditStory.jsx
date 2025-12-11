@@ -94,7 +94,7 @@ export default function EditStory() {
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <div className="flex justify-center items-center h-64">
-          <div className="text-sm text-gray-600">Loading...</div>
+          <div className="text-sm text-gray-600">Đang tải...</div>
         </div>
       </div>
     );
@@ -106,7 +106,7 @@ export default function EditStory() {
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-8">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Edit Story</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Sửa truyện</h1>
 
           {error && (
             <div className="mb-4 p-3 sm:p-4 bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm rounded">
@@ -123,69 +123,69 @@ export default function EditStory() {
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Title */}
             <div>
-              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Title *</label>
+              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Tên *</label>
               <input
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded focus:outline-none focus:border-primary"
-                placeholder="Story title"
+                placeholder="Tên truyện"
                 required
               />
             </div>
 
             {/* Author */}
             <div>
-              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Author *</label>
+              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Tác giả *</label>
               <input
                 type="text"
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
                 className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded focus:outline-none focus:border-primary"
-                placeholder="Author name"
+                placeholder="Tên tác giả"
                 required
               />
             </div>
 
             {/* Translator */}
             <div>
-              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Translator (Optional)</label>
+              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Nhà dịch (Đối - Tùy chọn)</label>
               <input
                 type="text"
                 value={translator}
                 onChange={(e) => setTranslator(e.target.value)}
                 className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded focus:outline-none focus:border-primary"
-                placeholder="Translator name"
+                placeholder="Tên nhà dịch"
               />
             </div>
 
             {/* Status */}
             <div>
-              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Status *</label>
+              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Trạng thái *</label>
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
                 className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded focus:outline-none focus:border-primary"
                 required
               >
-                <option value="ongoing">Ongoing</option>
-                <option value="full">Completed</option>
+                <option value="ongoing">Đang càng</option>
+                <option value="full">Hoàn thành</option>
               </select>
             </div>
 
             {/* Summary */}
             <div>
-              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Summary *</label>
+              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Tóm tắt *</label>
               <RichTextEditor
                 value={summary}
                 onChange={setSummary}
-                placeholder="Story summary (supports bold, italic, underline)"
+                placeholder="Tóm tắt truyện (hỗ trợ in đậm, in nghưa, gạch chân)"
               />
             </div>
 
             {/* Cover Image */}
             <div>
-              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Cover Image (Optional)</label>
+              <label className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Hình ảnh bìa (Đối - Tùy chọn)</label>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <div className="flex-1">
                   <input
@@ -194,13 +194,13 @@ export default function EditStory() {
                     onChange={handleImageChange}
                     className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded focus:outline-none focus:border-primary"
                   />
-                  <p className="text-xs text-gray-500 mt-1">JPG, PNG, or WebP</p>
+                  <p className="text-xs text-gray-500 mt-1">JPG, PNG, hoặc WebP</p>
                 </div>
                 {coverPreview && (
                   <div className="w-24 sm:w-32 flex-shrink-0">
                     <img
                       src={coverPreview}
-                      alt="Cover preview"
+                      alt="Xem trước bìa"
                       className="w-24 sm:w-32 h-32 sm:h-48 object-cover rounded shadow"
                     />
                   </div>
@@ -215,14 +215,14 @@ export default function EditStory() {
                 disabled={saving}
                 className="flex-1 bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {saving ? 'Saving...' : 'Save Changes'}
+                {saving ? 'Đang lưu...' : 'Lưu thay đổi'}
               </button>
               <button
                 type="button"
                 onClick={() => navigate('/dashboard')}
                 className="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded text-sm sm:text-base"
               >
-                Cancel
+                Hủy
               </button>
             </div>
           </form>

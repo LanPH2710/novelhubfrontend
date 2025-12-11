@@ -46,18 +46,18 @@ export default function Dashboard() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold">Admin Dashboard</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">Bảng điều khiển Quản trị viên</h1>
           <a
             href="/add-story"
             className="bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-4 sm:px-6 rounded text-sm sm:text-base whitespace-nowrap"
           >
-            + Add Story
+            + Thêm truyện
           </a>
         </div>
 
         {loading ? (
           <div className="flex justify-center items-center h-64">
-            <div className="text-sm text-gray-600">Loading...</div>
+            <div className="text-sm text-gray-600">Đang tải...</div>
           </div>
         ) : (
           <div className="bg-white rounded-lg shadow-md overflow-x-auto">
@@ -65,11 +65,11 @@ export default function Dashboard() {
               <table className="w-full text-sm">
                 <thead className="bg-gray-100 border-b">
                   <tr>
-                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Title</th>
-                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm hidden sm:table-cell">Author</th>
-                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Ch</th>
-                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Status</th>
-                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Actions</th>
+                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Tên</th>
+                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm hidden sm:table-cell">Tác giả</th>
+                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Ĉở</th>
+                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Trạng thái</th>
+                    <th className="px-3 sm:px-6 py-2 sm:py-3 text-left font-semibold text-xs sm:text-sm">Thào tác</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -92,35 +92,35 @@ export default function Dashboard() {
                           <a
                             href={`/story/${story._id}`}
                             className="text-blue-600 hover:underline text-xs"
-                            title="View Story"
+                            title="Xem truyện"
                           >
-                            V
+                            X
                           </a>
                           <a
                             href={`/edit-story/${story._id}`}
                             className="text-green-600 hover:underline text-xs"
-                            title="Edit Story"
+                            title="Sửa truyện"
                           >
-                            E
+                            S
                           </a>
                           <a
                             href={`/add-chapter/${story._id}`}
                             className="text-blue-600 hover:underline text-xs"
-                            title="Add Single Chapter"
+                            title="Thêm một chương"
                           >
                             +
                           </a>
                           <a
                             href={`/add-bulk-chapters/${story._id}`}
                             className="text-purple-600 hover:underline text-xs"
-                            title="Add Bulk Chapters"
+                            title="Thêm nhiều chương"
                           >
-                            +B
+                            +Đ
                           </a>
                           <button
                             onClick={() => handleDeleteStory(story._id)}
                             className="text-red-600 hover:underline text-xs"
-                            title="Delete Story"
+                            title="Xóa truyện"
                           >
                             ×
                           </button>
@@ -134,12 +134,12 @@ export default function Dashboard() {
 
             {stories.length === 0 && (
               <div className="text-center py-8 sm:py-12">
-                <p className="text-gray-600 mb-4 text-sm">No stories yet</p>
+                <p className="text-gray-600 mb-4 text-sm">Chưa có truyện nào</p>
                 <a
                   href="/add-story"
                   className="text-primary hover:underline text-sm"
                 >
-                  Create your first story
+                  Tạo truyện đầu tiên của bạn
                 </a>
               </div>
             )}

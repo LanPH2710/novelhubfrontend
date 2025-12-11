@@ -67,7 +67,7 @@ export default function EditChapter() {
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <div className="flex justify-center items-center h-64">
-          <div className="text-sm text-gray-600">Loading...</div>
+          <div className="text-sm text-gray-600">Đang tải...</div>
         </div>
       </div>
     );
@@ -79,7 +79,7 @@ export default function EditChapter() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-8">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Edit Chapter {chapterNumber}</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Sửa chương {chapterNumber}</h1>
 
           {error && (
             <div className="mb-4 p-3 sm:p-4 bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm rounded">
@@ -97,7 +97,7 @@ export default function EditChapter() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                  Chapter Number
+                  Số chương
                 </label>
                 <input
                   type="number"
@@ -111,7 +111,7 @@ export default function EditChapter() {
 
               <div>
                 <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                  Chapter Title
+                  Tên chương
                 </label>
                 <input
                   type="text"
@@ -125,12 +125,12 @@ export default function EditChapter() {
 
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Content
+                Nội dung
               </label>
               <RichTextEditor
                 value={content}
                 onChange={setContent}
-                placeholder="Edit your chapter content here."
+                placeholder="Chỉnh sửa nội dung chương của bạn tại đây."
               />
             </div>
 
@@ -140,14 +140,14 @@ export default function EditChapter() {
                 disabled={saving}
                 className="flex-1 bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {saving ? 'Saving...' : 'Save Changes'}
+                {saving ? 'Đang lưu...' : 'Lưu thay đổi'}
               </button>
               <button
                 type="button"
                 onClick={() => navigate(`/story/${storyId}`)}
                 className="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded text-sm sm:text-base"
               >
-                Cancel
+                Hủy
               </button>
             </div>
           </form>

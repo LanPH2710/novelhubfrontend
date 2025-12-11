@@ -46,7 +46,7 @@ export default function AddChapter() {
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="bg-white rounded-lg shadow-md p-4 sm:p-8">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Add New Chapter</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Thêm chương mới</h1>
 
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 rounded mb-4">
@@ -58,7 +58,7 @@ export default function AddChapter() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                  Chapter Number
+                  Số chương
                 </label>
                 <input
                   type="number"
@@ -72,7 +72,7 @@ export default function AddChapter() {
 
               <div>
                 <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                  Chapter Title
+                  Tên chương
                 </label>
                 <input
                   type="text"
@@ -86,12 +86,12 @@ export default function AddChapter() {
 
             <div>
               <label className="block text-gray-700 font-semibold mb-1 sm:mb-2 text-xs sm:text-sm">
-                Content
+                Nội dung
               </label>
               <RichTextEditor
                 value={content}
                 onChange={setContent}
-                placeholder="Write your chapter content here. Use the toolbar above to format text."
+                placeholder="Viết nội dung chương của bạn tại đây. Sử dụng thanh công cụ ở trên để định dạng văn bản."
               />
             </div>
 
@@ -100,7 +100,7 @@ export default function AddChapter() {
               disabled={loading}
               className="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
             >
-              {loading ? 'Creating...' : 'Create Chapter'}
+              {loading ? 'Đang tạo...' : 'Tạo chương'}
             </button>
           </form>
         </div>
