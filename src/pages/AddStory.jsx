@@ -124,7 +124,7 @@ export default function AddStory() {
                 onChange={(e) => setStatus(e.target.value)}
                 className="w-full px-3 sm:px-4 py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
-                <option value="ongoing">Đang càng</option>
+                <option value="ongoing">Đang ra</option>
                 <option value="full">Hoàn thành</option>
               </select>
             </div>
@@ -134,7 +134,7 @@ export default function AddStory() {
               <RichTextEditor
                 value={summary}
                 onChange={setSummary}
-                placeholder="Write a short formatted summary (you can use bold, italic, underline)"
+                placeholder="Viết một tóm tắt ngắn có định dạng (bạn có thể sử dụng in đậm, in nghiêng, gạch chân)"
               />
             </div>
 

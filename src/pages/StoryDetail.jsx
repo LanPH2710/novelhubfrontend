@@ -124,7 +124,7 @@ export default function StoryDetail() {
                     ? 'bg-green-100 text-green-800' 
                     : 'bg-yellow-100 text-yellow-800'
                 }`}>
-                  {story.status === 'full' ? 'Hoàn thành' : 'Đang càng'}
+                  {story.status === 'full' ? 'Hoàn thành' : 'Đang ra'}
                 </span>
                 <span className="text-xs sm:text-sm text-gray-600">
                   {story.chaptersCount} chương
@@ -180,14 +180,14 @@ export default function StoryDetail() {
                     onClick={() => navigate(`/read/${id}/1`)}
                     className="bg-primary hover:bg-indigo-700 text-white font-bold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg text-xs sm:text-sm md:text-base"
                   >
-                    Start Reading
+                    Đọc Từ Đầu
                   </button>
                   {lastProgress && lastProgress.chapterNumber && (
                     <button
                       onClick={() => navigate(`/read/${id}/${lastProgress.chapterNumber}`)}
                       className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg text-xs sm:text-sm md:text-base"
                     >
-                      Keep Reading (Ch {lastProgress.chapterNumber})
+                      Đọc Tiếp (Chương {lastProgress.chapterNumber})
                     </button>
                   )}
                   {/* Edit story button for admins */}
@@ -196,7 +196,7 @@ export default function StoryDetail() {
                       onClick={() => navigate(`/edit-story/${id}`)}
                       className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg text-xs sm:text-sm md:text-base"
                     >
-                      Edit Story
+                      Chỉnh sửa truyện
                     </button>
                   )}
                 </div>
@@ -208,20 +208,20 @@ export default function StoryDetail() {
         {/* Chapters List */}
         <div className="bg-white rounded-lg shadow-md p-3 sm:p-5 md:p-6 lg:p-8">
           <div className="flex items-center justify-between gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6 flex-wrap">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Chapters</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Chương</h2>
             {JSON.parse(localStorage.getItem('user') || '{}').role === 'admin' && (
               <div className="flex gap-2 sm:gap-3">
                 <button
                   onClick={() => navigate(`/add-chapter/${id}`)}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 sm:py-2.5 px-2 sm:px-3 md:px-4 rounded-lg text-xs sm:text-sm"
                 >
-                  + Single
+                  + Thêm 1 chương
                 </button>
                 <button
                   onClick={() => navigate(`/add-bulk-chapters/${id}`)}
                   className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 sm:py-2.5 px-2 sm:px-3 md:px-4 rounded-lg text-xs sm:text-sm"
                 >
-                  + Bulk
+                  + Thêm nhiều chương
                 </button>
               </div>
             )}
@@ -229,7 +229,7 @@ export default function StoryDetail() {
 
           {loading ? (
             <div className="flex justify-center items-center h-32">
-              <div className="text-sm text-gray-600">Loading chapters...</div>
+              <div className="text-sm text-gray-600">Đang tải truyện...</div>
             </div>
           ) : chapters.length > 0 ? (
             <>
@@ -244,7 +244,7 @@ export default function StoryDetail() {
                       className="flex-1 min-w-0"
                     >
                       <span className="font-semibold text-primary text-xs sm:text-sm">
-                        Ch {chapter.chapterNumber}:
+                        Chương {chapter.chapterNumber}:
                       </span>
                       <span className="ml-1 sm:ml-2 text-gray-700 text-xs sm:text-sm truncate">{chapter.title}</span>
                     </a>
@@ -253,7 +253,7 @@ export default function StoryDetail() {
                         href={`/edit-chapter/${id}/${chapter.chapterNumber}`}
                         className="text-green-600 hover:underline text-xs sm:text-sm whitespace-nowrap"
                       >
-                        Edit
+                        Sửa
                       </a>
                     )}
                   </div>
@@ -271,7 +271,7 @@ export default function StoryDetail() {
               )}
             </>
           ) : (
-            <p className="text-center text-gray-600 text-sm">No chapters available yet</p>
+            <p className="text-center text-gray-600 text-sm">Chưa có chương nào</p>
           )}
         </div>
       </div>

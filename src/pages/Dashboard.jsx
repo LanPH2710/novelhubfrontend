@@ -94,35 +94,35 @@ export default function Dashboard() {
                             className="text-blue-600 hover:underline text-xs"
                             title="Xem truyện"
                           >
-                            X
+                            Xem
                           </a>
                           <a
                             href={`/edit-story/${story._id}`}
                             className="text-green-600 hover:underline text-xs"
                             title="Sửa truyện"
                           >
-                            S
+                            Sửa
                           </a>
                           <a
                             href={`/add-chapter/${story._id}`}
                             className="text-blue-600 hover:underline text-xs"
                             title="Thêm một chương"
                           >
-                            +
+                            Thêm 1
                           </a>
                           <a
                             href={`/add-bulk-chapters/${story._id}`}
                             className="text-purple-600 hover:underline text-xs"
                             title="Thêm nhiều chương"
                           >
-                            +Đ
+                            Thêm Nhiều
                           </a>
                           <button
                             onClick={() => handleDeleteStory(story._id)}
                             className="text-red-600 hover:underline text-xs"
                             title="Xóa truyện"
                           >
-                            ×
+                            Xóa
                           </button>
                         </div>
                       </td>
