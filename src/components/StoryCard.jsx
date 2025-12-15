@@ -5,25 +5,19 @@ export default function StoryCard({ story }) {
       className="bg-white rounded-lg shadow-md hover:shadow-xl transition overflow-hidden"
     >
       <div className="h-40 sm:h-48 lg:h-64 bg-gray-200 overflow-hidden">
-        {story.coverUrl ? (
-          <img
-            src={
-              story.coverUrl
-                ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${story.coverUrl}`
-                : '/default-cover.svg'
-            }
-            alt={story.title}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              e.target.src = '/default-cover.svg';
-            }}
-          />
+        <img
+          src={
+            story.coverUrl
+              ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${story.coverUrl}`
+              : '/default-cover.svg'
+          }
+          alt={story.title}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.target.src = '/default-cover.svg';
+          }}
+        />
 
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary text-white text-2xl sm:text-3xl lg:text-4xl">
-            📖
-          </div>
-        )}
       </div>
       <div className="p-2 sm:p-3 lg:p-4">
         <h3 className="font-bold text-xs sm:text-sm lg:text-lg truncate">{story.title}</h3>
