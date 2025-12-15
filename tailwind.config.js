@@ -7,8 +7,11 @@ module.exports = {
     extend: {
       colors: {
         // Green palette: light -> dark
-        primary: '#34d399', // emerald-400 (light green)
-        secondary: '#059669' // emerald-600 (darker green)
+         primary: '#386641',    // xanh đậm
+        secondary: '#6a994e',  // xanh lá
+        accent: '#a7c957',     // xanh nhạt
+        background: '#f2e8cf', // nền be
+        danger: '#bc4749'      // đỏ nhấn
       }
     }
   },

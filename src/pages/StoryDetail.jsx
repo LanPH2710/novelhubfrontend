@@ -72,7 +72,7 @@ export default function StoryDetail() {
 
   if (!story) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         <Navbar />
         <div className="flex justify-center items-center h-64">
           <div className="text-xl text-gray-600">Đang tải...</div>
@@ -87,7 +87,7 @@ export default function StoryDetail() {
     : defaultCoverPath;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-10 lg:py-12">
