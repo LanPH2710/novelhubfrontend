@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#6366f1',
-        secondary: '#ec4899'
+        // Green palette: light -> dark
+        primary: '#34d399', // emerald-400 (light green)
+        secondary: '#059669' // emerald-600 (darker green)
       }
     }
   },

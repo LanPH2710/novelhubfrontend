@@ -98,7 +98,7 @@ export default function AddChapter() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
+              className="w-full bg-primary hover:bg-green-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
             >
               {loading ? 'Đang tạo...' : 'Tạo chương'}
             </button>

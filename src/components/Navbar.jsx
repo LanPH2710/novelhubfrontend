@@ -65,7 +65,7 @@ export default function Navbar() {
             ) : (
               <a
                 href="/login"
-                className="bg-primary hover:bg-indigo-700 text-white px-3 py-2 rounded text-sm"
+                className="bg-primary hover:bg-green-700 text-white px-3 py-2 rounded text-sm"
               >
                 Đăng nhập
               </a>
@@ -84,7 +84,7 @@ export default function Navbar() {
             ) : (
               <a
                 href="/login"
-                className="bg-primary hover:bg-indigo-700 text-white px-2 py-1 rounded text-xs"
+                className="bg-primary hover:bg-green-700 text-white px-2 py-1 rounded text-xs"
               >
                 Đăng nhập
               </a>

@@ -49,7 +49,7 @@ export default function Dashboard() {
           <h1 className="text-2xl sm:text-3xl font-bold">Bảng điều khiển Quản trị viên</h1>
           <a
             href="/add-story"
-            className="bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-4 sm:px-6 rounded text-sm sm:text-base whitespace-nowrap"
+            className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 sm:px-6 rounded text-sm sm:text-base whitespace-nowrap"
           >
             + Thêm truyện
           </a>

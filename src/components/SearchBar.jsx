@@ -20,7 +20,7 @@ export default function SearchBar({ onSearch }) {
         />
         <button
           type="submit"
-          className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 bg-primary text-white px-2 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-sm hover:bg-indigo-700"
+          className="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 bg-primary text-white px-2 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-sm hover:bg-green-700"
         >
           Tìm
         </button>

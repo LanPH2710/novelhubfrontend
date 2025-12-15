@@ -178,7 +178,7 @@ export default function StoryDetail() {
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 flex-wrap">
                   <button
                     onClick={() => navigate(`/read/${id}/1`)}
-                    className="bg-primary hover:bg-indigo-700 text-white font-bold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg text-xs sm:text-sm md:text-base"
+                    className="bg-primary hover:bg-green-700 text-white font-bold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg text-xs sm:text-sm md:text-base"
                   >
                     Đọc Từ Đầu
                   </button>

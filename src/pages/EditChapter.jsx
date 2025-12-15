@@ -138,7 +138,7 @@ export default function EditChapter() {
               <button
                 type="submit"
                 disabled={saving}
-                className="flex-1 bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {saving ? 'Đang lưu...' : 'Lưu thay đổi'}
               </button>

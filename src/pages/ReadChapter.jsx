@@ -181,9 +181,9 @@ export default function ReadChapter() {
 
               <button
                 onClick={() => navigate(`/story/${storyId}`)}
-                className="bg-primary hover:bg-indigo-700 text-white px-2 sm:px-3 py-1 sm:py-2 rounded text-xs sm:text-base"
+                className="bg-primary hover:bg-green-700 text-white px-2 sm:px-3 py-1 sm:py-2 rounded text-xs sm:text-base"
               >
-                Quở lại
+                Trở lại
               </button>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function ReadChapter() {
             {/* Floating Icon Button */}
             <button
               onClick={() => setShowFloatingPanel(!showFloatingPanel)}
-              className="bg-primary hover:bg-indigo-700 text-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-300"
+              className="bg-primary hover:bg-green-700 text-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-300"
               title="Show controls"
               aria-label="Show/hide controls"
             >
@@ -255,14 +255,14 @@ export default function ReadChapter() {
                       disabled={!prevChapNum}
                       className={`flex-1 px-2 py-1 rounded text-xs ${prevChapNum ? 'bg-gray-600 hover:bg-gray-700 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
                     >
-                      ← Prev
+                      ← Trước
                     </button>
 
                     <button
                       onClick={() => setShowChoose(true)}
                       className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs"
                     >
-                      Choose
+                      Chọn
                     </button>
 
                     <button
@@ -270,14 +270,14 @@ export default function ReadChapter() {
                       disabled={!nextChapNum}
                       className={`flex-1 px-2 py-1 rounded text-xs ${nextChapNum ? 'bg-gray-600 hover:bg-gray-700 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
                     >
-                      Next →
+                      Sau →
                     </button>
 
                     <button
                       onClick={() => navigate(`/story/${storyId}`)}
-                      className="flex-1 bg-primary hover:bg-indigo-700 text-white px-2 py-1 rounded text-xs"
+                      className="flex-1 bg-primary hover:bg-green-700 text-white px-2 py-1 rounded text-xs"
                     >
-                      Back
+                      Trở lại
                     </button>
                   </div>
                 </div>
@@ -340,14 +340,14 @@ export default function ReadChapter() {
                 disabled={!prevChapNum}
                 className={`px-2 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-base ${prevChapNum ? 'bg-gray-600 hover:bg-gray-700 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
               >
-                ← Prev
+                ← Trước
               </button>
 
               <button
                 onClick={() => setShowChoose(true)}
                 className="bg-blue-500 hover:bg-blue-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-base"
               >
-                Choose
+                Chọn
               </button>
 
               <button
@@ -355,7 +355,7 @@ export default function ReadChapter() {
                 disabled={!nextChapNum}
                 className={`px-2 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-base ${nextChapNum ? 'bg-gray-600 hover:bg-gray-700 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
               >
-                Next →
+                Sau →
               </button>
             </div>
           ) : (
@@ -380,7 +380,7 @@ export default function ReadChapter() {
                     <div className="flex gap-2">
                       <button
                         onClick={() => { setShowChoose(false); navigate(`/read/${storyId}/${c.chapterNumber}`); }}
-                        className="bg-primary hover:bg-indigo-700 text-white px-2 sm:px-3 py-1 rounded text-xs sm:text-sm"
+                        className="bg-primary hover:bg-green-700 text-white px-2 sm:px-3 py-1 rounded text-xs sm:text-sm"
                       >
                         Đọc
                       </button>
@@ -396,7 +396,7 @@ export default function ReadChapter() {
         {showScrollTop && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 bg-primary hover:bg-indigo-700 text-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-300 z-40"
+            className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 bg-primary hover:bg-green-700 text-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-300 z-40"
             title="Lên trên Đầu trang"
             aria-label="Cuộn lên đầu trang"
           >

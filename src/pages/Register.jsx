@@ -113,7 +113,7 @@ export default function Register() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-3 sm:px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
+              className="w-full bg-primary hover:bg-green-700 text-white font-bold py-2 px-3 sm:px-4 rounded-lg text-sm sm:text-base disabled:opacity-50"
             >
               {loading ? 'Đang đăng ký...' : 'Đăng ký'}
             </button>
