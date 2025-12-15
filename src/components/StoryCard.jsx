@@ -7,10 +7,18 @@ export default function StoryCard({ story }) {
       <div className="h-40 sm:h-48 lg:h-64 bg-gray-200 overflow-hidden">
         {story.coverUrl ? (
           <img
-            src={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${story.coverUrl}`}
+            src={
+              story.coverUrl
+                ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${story.coverUrl}`
+                : '/default-cover.svg'
+            }
             alt={story.title}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              e.target.src = '/default-cover.svg';
+            }}
           />
+
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary text-white text-2xl sm:text-3xl lg:text-4xl">
             📖
