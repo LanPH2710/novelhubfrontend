@@ -39,7 +39,7 @@ export default function EditStory() {
       setStatus(story.status);
       setSummary(story.summary);
       if (story.coverUrl) {
-        setCoverPreview(`http://localhost:5000${story.coverUrl}`);
+        setCoverPreview(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${story.coverUrl}`);
       }
     } catch (err) {
       setError('Failed to load story');

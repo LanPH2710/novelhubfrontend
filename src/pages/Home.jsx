@@ -40,7 +40,7 @@ export default function Home() {
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-10 lg:py-12">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2 sm:mb-3 md:mb-4">Chào mừng đến NovelHub</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2 sm:mb-3 md:mb-4">Chào mừng đến Novel Hub by Bear</h1>
         <p className="text-center text-xs sm:text-sm md:text-base text-gray-600 mb-6 sm:mb-7 md:mb-8 lg:mb-10">
           Khám phá và đọc hàng ngàn truyện light novel
         </p>

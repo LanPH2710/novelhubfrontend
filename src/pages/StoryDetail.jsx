@@ -81,9 +81,10 @@ export default function StoryDetail() {
     );
   }
 
-  const coverUrl = story.coverUrl 
+  const defaultCoverPath = '/default-cover.svg';
+  const coverUrl = story.coverUrl
     ? `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${story.coverUrl}`
-    : null;
+    : defaultCoverPath;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -94,17 +95,14 @@ export default function StoryDetail() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
             {/* Cover Image */}
             <div className="md:col-span-1">
-              {coverUrl ? (
-                <img
-                  src={coverUrl}
-                  alt={story.title}
-                  className="w-full rounded-lg shadow-md h-auto"
-                />
-              ) : (
-                <div className="w-full aspect-[3/4] rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
-                  📖
-                </div>
-              )}
+              <img
+                src={coverUrl}
+                alt={story.title}
+                className="w-full rounded-lg shadow-md h-auto"
+                onError={(e) => {
+                  if (e.target && e.target.src !== defaultCoverPath) e.target.src = defaultCoverPath;
+                }}
+              />
             </div>
 
             {/* Story Info */}
